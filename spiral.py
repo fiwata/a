@@ -27,16 +27,16 @@ def plot_csv_file(filename):
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     # Plot the 3D line
-    ax.plot(x_data, y_data, 6*z_data)
+    ax.plot(x_data, y_data, z_data)
     # Set axis labels and title
-    ax.set_xlabel("X-axis(um)")
-    ax.set_ylabel("Y-axis(um)")
-    ax.set_zlabel("Z-axis(um)")
+    ax.set_xlabel("X-axis(V)")
+    ax.set_ylabel("Y-axis(V)")
+    ax.set_zlabel("Z-axis(V)")
     ax.set_title("3D Spiral Printing Simulation")
     # Set custom limits for the axes
     ax.set_xlim([0, 2.5*radius_of_coil])  
     ax.set_ylim([0, 2.5*radius_of_coil])  # Example y-axis range
-    ax.set_zlim([0, 30])  # Example z-axis range
+    ax.set_zlim([0, 5])  # Example z-axis range
     plt.show() #return fig, ax
 
     
@@ -47,7 +47,6 @@ def spiral():
     z_data = []
     nt = 3
     iin = 0
-    total_steps = 300
     base_height = 1
     segment2 = base_height + 1.5
     total_height = segment2 + 2.5
@@ -80,7 +79,6 @@ def y_axis_rrotat(angle):
     y_data = []
     z_data = []
     iin = 0
-    total_steps = 300
     base_height = 1
     segment2 = base_height + 1.5
     total_height = segment2 + 2.5
@@ -111,7 +109,6 @@ def x_axis_rrotat(angle):
     y_data = []
     z_data = []
     iin = 0
-    total_steps = 300
     base_height = 1
     segment2 = base_height + 1.5
     total_height = segment2 + 2.5
